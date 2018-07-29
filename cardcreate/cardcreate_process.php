@@ -1,6 +1,6 @@
 <?php
-require("configure/bulletinboard.php");
-require("library/bulletinboard.php");
+require("../configure/bulletinboard.php");
+require("../library/bulletinboard.php");
 session_start();
 
 if(!isset($_SESSION['is_login'])){

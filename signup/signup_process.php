@@ -1,6 +1,6 @@
 <?php
-require("configure/bulletinboard.php");
-require("library/bulletinboard.php");
+require("../configure/bulletinboard.php");
+require("../library/bulletinboard.php");
 $conn = db_init($config["host"], $config["duser"], $config["dpw"], $config["dname"]);
 $sql = "SELECT * FROM user WHERE email='".$_POST['inputEmail']."'";
 

@@ -6,7 +6,7 @@ $conn = db_init($config["host"], $config["duser"], $config["dpw"], $config["dnam
 $result = mysqli_query($conn, "SELECT * FROM user");
 session_start();
 if(!isset($_SESSION['is_login'])){
-    header('Location: ./login.php');
+    header('Location: ../login/login.php');
 }
 ?>
 \

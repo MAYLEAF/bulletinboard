@@ -39,8 +39,8 @@
            </div>
            <div class="row">
              <div class="col-1 col-md-2 offset-md-10 py-4">
-               <a href="./login.php" class="text-white">Signin</a>
-               <a href="./signup.php" class="text-white">Signup</a>
+               <a href="./login/login.php" class="text-white">Signin</a>
+               <a href="./signup/signup.php" class="text-white">signup</a>
            </div>
          </div>
        </div>
