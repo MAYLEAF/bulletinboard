@@ -35,7 +35,7 @@ if($result->num_rows == 0){
 
       sleep(4);
 
-  header('Location: http://localhost/bulletinboard/signup.php');
+  header('Location: http://localhost/bulletinboard/signup/signup.php');
 }
 
 ?>

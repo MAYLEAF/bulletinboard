@@ -33,8 +33,8 @@
                  </div>
                  <div class="row">
                    <div class="col-1 col-md-2 offset-md-10 py-4">
-                       <a href="./signup.php" class="text-white">Signup</a>
-                       <a href="./login.php" class="text-white">Signin</a>
+                       <a href="../signup/signup.php" class="text-white">회원가입</a>
+                       <a href="./login.php" class="text-white">로그인</a>
                  </div>
                </div>
              </div>
@@ -43,7 +43,7 @@
         <section class="text-center">
           <form class="col-md-4 mx-auto" action="login_process.php" method="post">
             <img class="mb-4" src="../image/wave.svg" alt="" width="72" height="72">
-            <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+            <h1 class="h3 mb-3 font-weight-normal">로그인</h1>
             <label for="inputEmail" class="sr-only">Email address</label>
             <input type="email" id="inputEmail" name="inputEmail"  class="form-control" placeholder="Email address" required autofocus>
             <label for="inputPassword" class="sr-only">Password</label>
@@ -53,7 +53,7 @@
                 <input type="checkbox" value="remember-me"> Remember me
               </label>
             </div>
-            <button class="btn btn-lg btn-primary btn-block" type="submit" value="login_process.php">Sign In</button>
+            <button class="btn btn-lg btn-primary btn-block" type="submit" value="login_process.php">로그인</button>
             <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
           </form>
         </section>
