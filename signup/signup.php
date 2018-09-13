@@ -14,7 +14,7 @@
 
     <header>
       <div class="bg-dark" >
-        <div class="row">\
+        <div class="row">
           <div class="col-sm-1 offset-md-10">
             <div class="btn-group">
               <a class="btn btn-outline-secondary btn-sm my-2" href="../login/login.php" class="text-white">로그인</a>
