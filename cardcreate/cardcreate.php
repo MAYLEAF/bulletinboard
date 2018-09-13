@@ -31,8 +31,8 @@ if(!isset($_SESSION['is_login'])){
           </div>
           <div class="col-sm-1">
             <div class="btn-group">
-              <a class="btn btn-outline-secondary btn-sm my-2" href="./login/login.php" class="text-white">로그인</a>
-              <a class="btn btn-outline-secondary btn-sm my-2" href="./signup/signup.php" class="text-white">회원가입</a>
+              <a class="btn btn-outline-secondary btn-sm my-2" href="../login/login.php" class="text-white">로그인</a>
+              <a class="btn btn-outline-secondary btn-sm my-2" href="../signup/signup.php" class="text-white">회원가입</a>
             </div>
           </div>
        </div>
