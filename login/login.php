@@ -1,48 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
- <doctype html>
- <html lang="en">
-   <head>
-     <!-- Required meta tags -->
-     <meta charset="utf-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 
-     <!-- Bootstrap CSS -->
-     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <title>지식의 바다, 지해</title>
+  </head>
+  <body>
 
-     <title>지식의 바다, 지해</title>
-   </head>
-   <body>
-
-     <header>
-       <div class="bg-dark" >
-         <div class="row">
-           <div class="col-md-10">
-           </div>
-           <div class="col-sm-1">
-             <div class="btn-group">
-               <a class="btn btn-outline-secondary btn-sm my-2" href="../login/login.php" class="text-white">로그인</a>
-               <a class="btn btn-outline-secondary btn-sm my-2" href="../signup/signup.php" class="text-white">회원가입</a>
-             </div>
-           </div>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-8 col-md-7 py-4">
-              <h4 class="text-white">About</h4>
-              <p class="text-muted">지해는 잘하는 것을 다른 사람에게 알려주고, 그 대가로 그 사람이 잘하는 것을 배울 수 있는 커뮤니티입니다.</p>
-            </div>
-            <div class="col-sm-4 offset-md-1 py-4">
-              <h4 class="text-white">Contact</h4>
-              <ul class="list-unstyled">
-                <li><a href="#" class="text-white">Follow on Twitter</li>
-                <li><a href="#" class="text-white">Like on Facebook</li>
-                <li><a href="#" class="text-white">Email me</li>
-              </ul>
+    <header>
+      <div class="bg-dark" >
+        <div class="row">
+          <div class="col-md-10">
+            <img src="../image/logo.png" alt="">
+          </div>
+          <div class="col-sm-1">
+            <div class="btn-group">
+              <a class="btn btn-outline-secondary btn-sm my-2" href="./login/login.php" class="text-white">로그인</a>
+              <a class="btn btn-outline-secondary btn-sm my-2" href="./signup/signup.php" class="text-white">회원가입</a>
             </div>
           </div>
-        </div>
-      </div>
-     </header>
+       </div>
+       <div class="container">
+         <div class="row">
+           <div class="col-sm-8 col-md-7 py-4">
+             <h4 class="text-white">About</h4>
+             <p class="text-muted">지해는 잘하는 것을 다른 사람에게 알려주고, 그 대가로 그 사람이 잘하는 것을 배울 수 있는 커뮤니티입니다.</p>
+           </div>
+           <div class="col-sm-4 offset-md-1 py-4">
+             <h4 class="text-white">Contact</h4>
+             <ul class="list-unstyled">
+               <li><a href="#" class="text-white">Follow on Twitter</a></li>
+               <li><a href="#" class="text-white">Like on Facebook</a></li>
+               <li><a href="#" class="text-white">Email me</a></li>
+             </ul>
+           </div>
+         </div>
+       </div>
+     </div>
+    </header>
 
       <main role="main" class="jumbotron">
 
