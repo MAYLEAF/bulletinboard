@@ -51,7 +51,7 @@
 
             <div class="text-center">
               <img class="mb-4" src="../../image/wave.svg" alt="" width="72" height="72">
-              <h1 class="h3 mb-3 font-weight-normal">회원가입</h1>
+              <h1 class="h3 mb-3 font-weight-normal text-info">회원가입</h1>
               <label for="email" class="sr-only">Email</label>
               <input type="email" id="inputEmail" name="inputEmail" class="form-control" placeholder="Email address" required autofocus>
               <label for="password" class="sr-only">Password</label>

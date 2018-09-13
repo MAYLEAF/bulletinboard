@@ -63,7 +63,7 @@ if(!isset($_SESSION['is_login'])){
 
             <div class="text-center">
               <img class="mb-4" src="../../image/wave.svg" alt="" width="72" height="72">
-              <h1 class="h3 mb-3 font-weight-normal">내 재능카드 만들기</h1>
+              <h1 class="h3 mb-3 font-weight-normal text-info">내 재능카드 만들기</h1>
 
               <label for="inputBegood" class="sr-only">inputBegood</label>
               <input type="text"  id="inputBegood" name="inputBegood" class="form-control" placeholder="본인이 다른 사람에게 가르쳐줄 수 있는 것을 적어주세요." required>

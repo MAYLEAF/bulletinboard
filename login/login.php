@@ -49,7 +49,7 @@
         <section class="text-center">
           <form class="col-md-4 mx-auto" action="login_process.php" method="post">
             <img class="mb-4" src="../../image/wave.svg" alt="" width="72" height="72">
-            <h1 class="h3 mb-3 font-weight-normal">로그인</h1>
+            <h1 class="h3 mb-3 font-weight-normal text-info">로그인</h1>
             <label for="inputEmail" class="sr-only">Email address</label>
             <input type="email" id="inputEmail" name="inputEmail"  class="form-control" placeholder="Email address" required autofocus>
             <label for="inputPassword" class="sr-only">Password</label>
