@@ -55,7 +55,7 @@
 
           <section class="jumbotron text-center" style="margin-bottom: 0px;">
             <div class="container">
-              <h1 class="jumbotron-heading">재능 검색하기</h1>
+              <h1 class="jumbotron-heading text-white">재능 검색하기</h1>
               <form class="" action="index.php" method="get">
                 <label for="Search"></label>
                 <div class="row">
