@@ -14,11 +14,8 @@
 
     <header>
       <div class="bg-dark" >
-        <div class="row">
-          <div class="col-md-10">
-            <img src="../image/logo.png" alt="">
-          </div>
-          <div class="col-sm-1">
+        <div class="row">\
+          <div class="col-sm-1 offset-md-10">
             <div class="btn-group">
               <a class="btn btn-outline-secondary btn-sm my-2" href="../login/login.php" class="text-white">로그인</a>
               <a class="btn btn-outline-secondary btn-sm my-2" href="../signup/signup.php" class="text-white">회원가입</a>
