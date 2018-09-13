@@ -9,7 +9,6 @@ if(!isset($_SESSION['is_login'])){
     header('Location: ../login/login.php');
 }
 ?>
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -20,7 +19,7 @@ if(!isset($_SESSION['is_login'])){
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 
-    <title>지식의 바다 지해</title>
+    <title>지식의 바다, 지해</title>
   </head>
   <body>
 
@@ -28,12 +27,12 @@ if(!isset($_SESSION['is_login'])){
       <div class="bg-dark" >
         <div class="row">
           <div class="col-md-10">
-            <img src="../../image/logo.png" alt="">
+            <img src="../image/logo.png" alt="">
           </div>
           <div class="col-sm-1">
             <div class="btn-group">
-              <a class="btn btn-outline-secondary btn-sm my-2" href="../login/login.php" class="text-white">로그인</a>
-              <a class="btn btn-outline-secondary btn-sm my-2" href="..//signup/signup.php" class="text-white">회원가입</a>
+              <a class="btn btn-outline-secondary btn-sm my-2" href="./login/login.php" class="text-white">로그인</a>
+              <a class="btn btn-outline-secondary btn-sm my-2" href="./signup/signup.php" class="text-white">회원가입</a>
             </div>
           </div>
        </div>
