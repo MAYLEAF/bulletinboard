@@ -1,7 +1,7 @@
 
 <?php
-require("configure/bulletinboard.php");
-require("library/bulletinboard.php");
+require("../configure/bulletinboard.php");
+require("../library/bulletinboard.php");
 $conn = db_init($config["host"], $config["duser"], $config["dpw"], $config["dname"]);
 $result = mysqli_query($conn, "SELECT * FROM user");
 session_start();
@@ -9,7 +9,7 @@ if(!isset($_SESSION['is_login'])){
     header('Location: ../login/login.php');
 }
 ?>
-\
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -22,47 +22,40 @@ if(!isset($_SESSION['is_login'])){
 
     <title>지식의 바다 지해</title>
   </head>
-
   <body>
+
     <header>
-
-      <div class="collapse bg-dark" id="navbarHeader">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-8 col-md-7 py-4">
-              <h4 class="text-white">About</h4>
-              <p class="text-muted">지해는 잘하는 것을 다른 사람에게 알려주고, 그 대가로 그 사람이 잘하는 것을 배울 수 있는 커뮤니티입니다.</p>
-            </div>
-
-            <div class="col-sm-4 offset-md-1 py-4">
-              <h4 class="text-white">Contact</h4>
-              <ul class="list-unstyled">
-                <li><a href="#" class="text-white">Follow on Twitter</li>
-                <li><a href="#" class="text-white">Like on Facebook</li>
-                <li><a href="#" class="text-white">Email me</li>
-              </ul>
-            </div>
-
+      <div class="bg-dark" >
+        <div class="row">
+          <div class="col-md-10">
+            <img src="../../image/logo.png" alt="">
           </div>
-        </div>
-      </div>
-
-      <div class="navbar navbar-dark bg-dark box-shadow">
-        <div class="container d-flex justify-content-between">
-
-          <a href="#" class="navbar-brand d-flex align-items-center">
-            <img src="../image/wave.svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
-            <strong>지식의 바다</strong>
-          </a>
-
-          <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation" type="button" name="button">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-        </div>
-      </div>
-
+          <div class="col-sm-1">
+            <div class="btn-group">
+              <a class="btn btn-outline-secondary btn-sm my-2" href="../login/login.php" class="text-white">로그인</a>
+              <a class="btn btn-outline-secondary btn-sm my-2" href="../signup/signup.php" class="text-white">회원가입</a>
+            </div>
+          </div>
+       </div>
+       <div class="container">
+         <div class="row">
+           <div class="col-sm-8 col-md-7 py-4">
+             <h4 class="text-white">About</h4>
+             <p class="text-muted">지해는 잘하는 것을 다른 사람에게 알려주고, 그 대가로 그 사람이 잘하는 것을 배울 수 있는 커뮤니티입니다.</p>
+           </div>
+           <div class="col-sm-4 offset-md-1 py-4">
+             <h4 class="text-white">Contact</h4>
+             <ul class="list-unstyled">
+               <li><a href="#" class="text-white">Follow on Twitter</li>
+               <li><a href="#" class="text-white">Like on Facebook</li>
+               <li><a href="#" class="text-white">Email me</li>
+             </ul>
+           </div>
+         </div>
+       </div>
+     </div>
     </header>
+
 
     <main role="main" >
       <section class="jumbotron">
@@ -70,7 +63,7 @@ if(!isset($_SESSION['is_login'])){
           <form class="col-md-4 mx-auto" action="cardcreate_process.php" method="post">
 
             <div class="text-center">
-              <img class="mb-4" src="../image/wave.svg" alt="" width="72" height="72">
+              <img class="mb-4" src="../../image/wave.svg" alt="" width="72" height="72">
               <h1 class="h3 mb-3 font-weight-normal">내 재능카드 만들기</h1>
 
               <label for="inputBegood" class="sr-only">inputBegood</label>
