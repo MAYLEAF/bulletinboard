@@ -62,42 +62,21 @@ if(!isset($_SESSION['is_login'])){
               <img class="mb-4" src="../../image/wave.svg" alt="" width="72" height="72">
               <h1 class="h3 mb-3 font-weight-normal text-info">내 재능카드 만들기</h1>
 
-              <label for="inputBegood" class="sr-only">inputBegood</label>
-              <input type="text"  id="inputBegood" name="inputBegood" class="form-control" placeholder="본인이 다른 사람에게 가르쳐줄 수 있는 것을 적어주세요." required>
-              <label for="inputWannagood" class="sr-only">Wannagood</label>
-              <input type="text"  id="Wannagood" name="Wannagood" class="form-control" placeholder="본인이 다른 사람으로부터 배우고 싶은 것을 적어주세요." required>
+              <label for="inputBegood" class="sr-only">inputBegood</label> <input type="text"  id="inputBegood" name="inputBegood" class="form-control" placeholder="본인이 다른 사람에게 가르쳐줄 수 있는 것을 적어주세요." required>
+              <label for="inputWannagood" class="sr-only">Wannagood</label> <input type="text"  id="Wannagood" name="Wannagood" class="form-control" placeholder="본인이 다른 사람으로부터 배우고 싶은 것을 적어주세요." required>
+
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                <label class="btn btn-secondary active">
-                  <input type="checkbox" name="inputDay0" id="inputDay0" autocomplete="off" value="월" checked> 월요일
-                </label>
-                <label class="btn btn-secondary">
-                  <input type="checkbox" name="inputDay1" id="inputDay1" autocomplete="off" value="화"> 화요일
-                </label>
-                <label class="btn btn-secondary">
-                  <input type="checkbox" name="inputDay2" id="inputDay2" autocomplete="off" value="수"> 수요일
-                </label>
-                <label class="btn btn-secondary">
-                  <input type="checkbox" name="inputDay3" id="inputDay3" autocomplete="off" value="목"> 목요일
-                </label>
-                <label class="btn btn-secondary">
-                  <input type="checkbox" name="inputDay4" id="inputDay4" autocomplete="off" value="금"> 금요일
-                </label>
-                <label class="btn btn-secondary">
-                  <input type="checkbox" name="inputDay5" id="inputDay5" autocomplete="off" value="토"> 토요일
-                </label>
-                <label class="btn btn-secondary">
-                  <input type="checkbox" name="inputDay6" id="inputDay6" autocomplete="off" value="일"> 일요일
-                </label>
+                <label class="btn btn-secondary active"> <input type="checkbox" name="inputDay0" id="inputDay0" autocomplete="off" value="월" checked> 월요일 </label>
+                <label class="btn btn-secondary"> <input type="checkbox" name="inputDay1" id="inputDay1" autocomplete="off" value="화"> 화요일 </label>
+                <label class="btn btn-secondary"> <input type="checkbox" name="inputDay2" id="inputDay2" autocomplete="off" value="수"> 수요일 </label>
+                <label class="btn btn-secondary"> <input type="checkbox" name="inputDay3" id="inputDay3" autocomplete="off" value="목"> 목요일 </label> <label class="btn btn-secondary"> <input type="checkbox" name="inputDay4" id="inputDay4" autocomplete="off" value="금"> 금요일 </label> <label class="btn btn-secondary"> <input type="checkbox" name="inputDay5" id="inputDay5" autocomplete="off" value="토"> 토요일 </label>
+                <label class="btn btn-secondary"> <input type="checkbox" name="inputDay6" id="inputDay6" autocomplete="off" value="일"> 일요일 </label>
               </div>
 
-              <label for="inputTime" class="sr-only">inputTime</label>
-              <input type="text"  id="inputTime" name="inputTime" class="form-control" placeholder="그 요일에 괜찮은 시간대를 적어주세요." required>
-              <label for="inputHomepage" class="sr-only">inputHomepage</label>
-              <input type="text"  id="inputHomepage" name="inputHomepage" class="form-control" placeholder="강연 예시 영상이 담긴 주소를 적어주세요." >
-              <label for="inputRegion" class="sr-only">inputRegion</label>
-              <input type="text"  id="inputRegion" name="inputRegion" class="form-control" placeholder="본인 선호하는 지역을 적어주세요." required>
-              <label for="inputMemo" class="sr-only">inputMemo</label>
-              <input type="text"  id="inputMemo" name="inputMemo" class="form-control" placeholder="메모하고 싶은 내용을 적어주세요.ex) 개인기타 구비하셔야합니다." >
+              <label for="inputTime" class="sr-only">inputTime</label> <input type="text"  id="inputTime" name="inputTime" class="form-control" placeholder="그 요일에 괜찮은 시간대를 적어주세요." required>
+              <label for="inputHomepage" class="sr-only">inputHomepage</label> <input type="text"  id="inputHomepage" name="inputHomepage" class="form-control" placeholder="강연 예시 영상이 담긴 주소를 적어주세요." >
+              <label for="inputRegion" class="sr-only">inputRegion</label> <input type="text"  id="inputRegion" name="inputRegion" class="form-control" placeholder="본인 선호하는 지역을 적어주세요." required>
+              <label for="inputMemo" class="sr-only">inputMemo</label> <input type="text"  id="inputMemo" name="inputMemo" class="form-control" placeholder="메모하고 싶은 내용을 적어주세요.ex) 개인기타 구비하셔야합니다." >
 
             </div>
 

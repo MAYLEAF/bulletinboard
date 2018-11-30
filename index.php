@@ -84,9 +84,12 @@
                            <div class="d-flex justify-content-between align-items-center">
                              <div class="btn-group">
                                <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#article" data-id="<?php echo $row['cardid']; ?>" id="getcard">View</button>
-                               <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                               <form class="" action="./editcard/editcard.php" method="get">
+                                 <input type="hidden" name="editcard" class="form-control" value="<?php echo $row['cardid']; ?>" >
+                                 <input class="btn btn-sm btn-outline-secondary" type="submit" value="Edit">
+                               </form>
                              </div>
-                             <small class="text-muted">9mins</small>
+                             <small class="text-muted"></small>
                            </div>
                          </div>
                        </div>
@@ -102,7 +105,7 @@
                     <div class="modal-dialog" role="document">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h5 class="modal-title" id="articleLabel">Modal title</h5>
+                          <h5 class="modal-title" id="articleLabel"></h5>
                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                           </button>

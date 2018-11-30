@@ -10,6 +10,7 @@ $result = mysqli_query($conn, $sql);
 if($result->num_rows == 0){
     $message = "Check id or password. That is an id not registered or missed id or missed password";
     echo "<script type='text/javascript'>alert('$message');</script>";
+    header('Location: http://localhost/bulletinboard/login/login.php');
 
 
 } else {
@@ -20,5 +21,4 @@ if($result->num_rows == 0){
   header('Location: http://localhost/bulletinboard/index.php');
 
 }
-echo '로그인 하지 못했습니다.';
 ?>
