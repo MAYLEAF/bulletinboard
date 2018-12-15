@@ -4,6 +4,8 @@
   require("library/bulletinboard.php");
   $conn = db_init($config["host"], $config["duser"], $config["dpw"], $config["dname"]);
   $result = mysqli_query($conn, "SELECT * FROM card");
+  session_start();
+
  ?>
  <!doctype html>
  <html lang="en">
@@ -26,10 +28,17 @@
              <img src="../image/logo.png" alt="">
            </div>
            <div class="col-sm-1">
-             <div class="btn-group">
-               <a class="btn btn-outline-secondary btn-sm my-2" href="./login/login.php" class="text-white">로그인</a>
-               <a class="btn btn-outline-secondary btn-sm my-2" href="./signup/signup.php" class="text-white">회원가입</a>
-             </div>
+             <?php  if(!isset($_SESSION['is_login'])){?>
+               <div class="btn-group">
+                 <a class="btn btn-outline-secondary btn-sm my-2" href="./login/login.php" class="text-white">로그인</a>
+                 <a class="btn btn-outline-secondary btn-sm my-2" href="./signup/signup.php" class="text-white">회원가입</a>
+               </div>
+             <?php } else {?>
+               <div class="btn-group">
+                 <a class="btn btn-outline-secondary btn-sm my-2" href="./logout.php" class="text-white">로그아웃</a>
+                 <a class="btn btn-outline-secondary btn-sm my-2" href="./userPage/userPage.php" class="text-white">개인정보</a>
+               </div>
+             <?php } ?>
            </div>
         </div>
         <div class="container">
@@ -60,7 +69,7 @@
                 <label for="Search"></label>
                 <div class="row">
                   <input type="text" id="Search" name="Search" class="form-control col-10 col-sm-8 offset-sm-2 " placeholder="배우고 싶은 것을 검색하세요!">
-                  <button type="submit" id="Searchbutton" name="button" class="btn btn-outline-secondary">검색</button>
+                  <button type="button" id="Searchbutton" name="serbutton" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#article">검색</button>
                 </div>
               </form>
               <p>
@@ -71,33 +80,33 @@
           </section>
 
 
-                <div class="album py-5 bg-light">
-                  <div class="container">
-                    <div class="row">
-                      <?php
-                        while( $row = mysqli_fetch_assoc($result)){
-                      ?>
-                     <div class="col-md-4">
-                       <div class="card mb-4 box-shadow">
-                         <div class="card-body">
-                           <p class="card-text"> 잘하는 것:<br/><?php echo htmlspecialchars($row['begood']); ?><br/> 배우고 싶은 것:<br/><?php echo htmlspecialchars($row['wannagood']);?></p>
-                           <div class="d-flex justify-content-between align-items-center">
-                             <div class="btn-group">
-                               <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#article" data-id="<?php echo $row['cardid']; ?>" id="getcard">View</button>
-                               <form class="" action="./editcard/editcard.php" method="get">
-                                 <input type="hidden" name="editcard" class="form-control" value="<?php echo $row['cardid']; ?>" >
-                                 <input class="btn btn-sm btn-outline-secondary" type="submit" value="Edit">
-                               </form>
-                             </div>
-                             <small class="text-muted"></small>
-                           </div>
-                         </div>
+          <div class="album py-5 bg-light">
+            <div class="container">
+              <div class="row">
+                <?php
+                  while( $row = mysqli_fetch_assoc($result)){
+                ?>
+               <div class="col-md-4">
+                 <div class="card mb-4 box-shadow">
+                   <div class="card-body">
+                     <p class="card-text"> 잘하는 것:<br/><?php echo htmlspecialchars($row['begood']); ?><br/> 배우고 싶은 것:<br/><?php echo htmlspecialchars($row['wannagood']);?></p>
+                     <div class="d-flex justify-content-between align-items-center">
+                       <div class="btn-group">
+                         <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#article" data-id="<?php echo $row['cardid']; ?>" id="getcard">View</button>
+                         <form class="" action="./editcard/editcard.php" method="get">
+                           <input type="hidden" name="editcard" class="form-control" value="<?php echo $row['cardid']; ?>" >
+                           <input class="btn btn-sm btn-outline-secondary" type="submit" value="Edit">
+                         </form>
                        </div>
+                       <small class="text-muted"></small>
                      </div>
-                      <?php }  ?>
-                    </div>
-                  </div>
-                </div>
+                   </div>
+                 </div>
+               </div>
+                <?php }  ?>
+              </div>
+            </div>
+          </div>
 
               <div class="col-md-9">
                 <article>
@@ -120,8 +129,14 @@
 
                         </div>
                         <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                          <button type="button" class="btn btn-primary">Save changes</button>
+                          <div class="btn-group">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <form class="" action="./deletecard/deletecard_process.php" method="post">
+                              <input type="hidden" name="deletecard" class="form-control" id="deletecard" value="">
+                              <input type="submit" class="btn btn-danger" value="Delete"></button>
+                            </form>
+                          </div>
+
                         </div>
                       </div>
                     </div>
@@ -169,41 +184,7 @@
      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
      <script src="http://cdn.jsdelivr.net/mojs/latest/mo.min.js"></script>
-
-          <script>
-            $(document).ready(function(){
-
-            	$(document).on('click', '#getcard', function(e){
-
-            		e.preventDefault();
-
-            		var uid = $(this).data('id');   // it will get id of clicked row
-
-            		$('#dynamic-content').html(''); // leave it blank before ajax call
-            		$('#modal-loader').show();      // load ajax loader
-
-            		$.ajax({
-            			url: 'getcard.php',
-            			type: 'POST',
-            			data: 'id='+uid,
-            			dataType: 'html'
-            		})
-            		.done(function(data){
-            			console.log(data);
-            			$('#dynamic-content').html('');
-            			$('#dynamic-content').html(data); // load response
-            			$('#modal-loader').hide();		  // hide ajax loader
-            		})
-            		.fail(function(){
-            			$('#dynamic-content').html('<i class="glyphicon glyphicon-info-sign"></i> Something went wrong, Please try again...');
-            			$('#modal-loader').hide();
-            		});
-
-            	});
-
-            });
-
-          </script>
+     <script src="./js/modal.js"></script>
 
    </body>
  </html>

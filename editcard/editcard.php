@@ -1,13 +1,23 @@
 
 <?php
-require("../configure/bulletinboard.php");
-require("../library/bulletinboard.php");
-$conn = db_init($config["host"], $config["duser"], $config["dpw"], $config["dname"]);
-$result = mysqli_query($conn, "SELECT * FROM user");
-session_start();
-if(!isset($_SESSION['is_login'])){
-    header('Location: ../login/login.php');
-}
+  require("../configure/bulletinboard.php");
+  require("../library/bulletinboard.php");
+  $conn = db_init($config["host"], $config["duser"], $config["dpw"], $config["dname"]);
+  $result = mysqli_query($conn, "SELECT * FROM user");
+  session_start();
+  if(!isset($_SESSION['is_login'])){
+      header('Location: ../login/login.php');
+  }
+  $cardid = htmlspecialchars($_GET['editcard']);
+
+  $sql = "SELECT user FROM card WHERE cardid='".$cardid."'";
+  $result = mysqli_query($conn, $sql);
+  $row = mysqli_fetch_assoc($result);
+
+  if($row['user'] != $_SESSION['email']){
+    header('Location: http://localhost/bulletinboard/index.php');
+  }
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -65,12 +75,14 @@ if(!isset($_SESSION['is_login'])){
     <main role="main" >
       <section class="jumbotron">
 
-          <form class="col-md-4 mx-auto" action="cardcreate_process.php" method="post">
+          <form class="col-md-4 mx-auto" action="editcard_process.php" method="post">
 
             <div class="text-center">
-              <img class="mb-4" src="../../image/wave.svg" alt="" width="72" height="72">
-              <h1 class="h3 mb-3 font-weight-normal text-info">내 재능카드 만들기</h1>
 
+              <img class="mb-4" src="../../image/wave.svg" alt="" width="72" height="72">
+              <h1 class="h3 mb-3 font-weight-normal text-info">내 재능카드 고치기</h1>
+
+              <input type="hidden" name="inputcardid" class="form-control" value="<?php echo htmlspecialchars($cardid); ?>" >
               <label for="inputBegood" class="sr-only">inputBegood</label> <input type="text"  id="inputBegood" name="inputBegood" class="form-control" placeholder="본인이 다른 사람에게 가르쳐줄 수 있는 것을 적어주세요." required>
               <label for="inputWannagood" class="sr-only">Wannagood</label> <input type="text"  id="inputWannagood" name="inputWannagood" class="form-control" placeholder="본인이 다른 사람으로부터 배우고 싶은 것을 적어주세요." required>
 
@@ -91,7 +103,7 @@ if(!isset($_SESSION['is_login'])){
 
             </div>
 
-          <button class="btn btn-lg btn-block btn-primary btn-block" type="submit" value="cardcreate_process.php">내 카드 등록</button>
+          <button class="btn btn-lg btn-block btn-primary btn-block" type="submit" value="editcard_process.php">내 카드 수정</button>
           <p class="mt-5 mb-3 text-muted text-center">&copy; 2018-2019</p>
       </form>
 

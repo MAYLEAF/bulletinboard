@@ -49,23 +49,15 @@
             <div class="text-center">
               <img class="mb-4" src="../../image/wave.svg" alt="" width="72" height="72">
               <h1 class="h3 mb-3 font-weight-normal text-info">회원가입</h1>
-              <label for="email" class="sr-only">Email</label>
-              <input type="email" id="inputEmail" name="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-              <label for="password" class="sr-only">Password</label>
-              <input type="password" id="inputPassword" name="inputPassword" class="form-control" placeholder="Enter your Password" required>
-              <label for="dname" class="sr-only">name</label>
-              <input type="text" id="inputName" name="inputName" class="form-control" placeholder="Enter your Name" required>
-              <label for="age" class="sr-only">age</label>
-              <input type="number" id="inputAge" name="inputAge" class="form-control" placeholder="20" required>
+              <label for="email" class="sr-only">Email</label> <input type="email" id="inputEmail" name="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+              <label for="password" class="sr-only">Password</label> <input type="password" id="inputPassword" name="inputPassword" class="form-control" placeholder="Enter your Password" required>
+              <label for="dname" class="sr-only">name</label> <input type="text" id="inputName" name="inputName" class="form-control" placeholder="Enter your Name" required>
+              <label for="age" class="sr-only">age</label> <input type="number" id="inputAge" name="inputAge" class="form-control" placeholder="20" required>
             </div>
 
             <div class="btn-group btn-group-toggle" data-toggle="buttons">
-              <label class="btn btn-secondary active">
-                <input type="radio" name="inputSex" id="inputSex" autocomplete="off" value="Male" checked> 남자
-              </label>
-              <label class="btn btn-secondary">
-                <input type="radio" name="inputSex" id="inputSex" autocomplete="off" value="Female"> 여자
-              </label>
+              <label class="btn btn-secondary active"> <input type="radio" name="inputSex" autocomplete="off" value="Male" checked> 남자 </label>
+              <label class="btn btn-secondary"> <input type="radio" name="inputSex" autocomplete="off" value="Female"> 여자 </label>
             </div>
 
           <button class="btn btn-lg btn-block btn-primary btn-block" type="submit" value="login_process.php">회원가입</button>

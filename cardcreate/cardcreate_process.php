@@ -4,7 +4,7 @@ require("../library/bulletinboard.php");
 session_start();
 
 if(!isset($_SESSION['is_login'])){
-    header('Location: ./login.php');
+    header('Location: ../login/login.php');
 }
 
 $conn = db_init($config["host"], $config["duser"], $config["dpw"], $config["dname"]);
