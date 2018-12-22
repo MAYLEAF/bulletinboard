@@ -93,7 +93,7 @@
                      <div class="d-flex justify-content-between align-items-center">
                        <div class="btn-group">
                          <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#article" data-id="<?php echo $row['cardid']; ?>" id="getcard">View</button>
-                         <form class="" action="./editcard/editcard.php" method="get">
+                         <form class="" action="./cardedit/editcard.php" method="get">
                            <input type="hidden" name="editcard" class="form-control" value="<?php echo $row['cardid']; ?>" >
                            <input class="btn btn-sm btn-outline-secondary" type="submit" value="Edit">
                          </form>
@@ -131,7 +131,7 @@
                         <div class="modal-footer">
                           <div class="btn-group">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <form class="" action="./deletecard/deletecard_process.php" method="post">
+                            <form class="" action="./carddelete/deletecard_process.php" method="post">
                               <input type="hidden" name="deletecard" class="form-control" id="deletecard" value="">
                               <input type="submit" class="btn btn-danger" value="Delete"></button>
                             </form>
