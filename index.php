@@ -30,12 +30,12 @@
            <div class="col-sm-1">
              <?php  if(!isset($_SESSION['is_login'])){?>
                <div class="btn-group">
-                 <a class="btn btn-outline-secondary btn-sm my-2" href="./login/login.php" class="text-white">로그인</a>
-                 <a class="btn btn-outline-secondary btn-sm my-2" href="./signup/signup.php" class="text-white">회원가입</a>
+                 <a class="btn btn-outline-secondary btn-sm my-2" href="./auth/login.php" class="text-white">로그인</a>
+                 <a class="btn btn-outline-secondary btn-sm my-2" href="./auth/signup.php" class="text-white">회원가입</a>
                </div>
              <?php } else {?>
                <div class="btn-group">
-                 <a class="btn btn-outline-secondary btn-sm my-2" href="./logout.php" class="text-white">로그아웃</a>
+                 <a class="btn btn-outline-secondary btn-sm my-2" href="./auth/logout.php" class="text-white">로그아웃</a>
                  <a class="btn btn-outline-secondary btn-sm my-2" href="./userPage/userPage.php" class="text-white">개인정보</a>
                </div>
              <?php } ?>
