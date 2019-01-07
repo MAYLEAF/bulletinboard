@@ -2,9 +2,12 @@
 <?php
   require("configure/bulletinboard.php");
   require("library/bulletinboard.php");
+  //get configuration file
   $conn = db_init($config["host"], $config["duser"], $config["dpw"], $config["dname"]);
   $result = mysqli_query($conn, "SELECT * FROM card");
+  //connect to mysqldb and make query for showing card
   session_start();
+  //make session
 
  ?>
  <!doctype html>

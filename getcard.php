@@ -7,7 +7,8 @@
 
 
 	if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-	     // The request is using the POST method
+		 // The request is using the POST method
+		
 
 
 	 		$id = intval($_REQUEST['id']);
@@ -27,6 +28,7 @@
 
 
 	} elseif ($_SERVER['REQUEST_METHOD'] === 'GET') {
+		// If the request method is get, make search
 			$begood = intval($_REQUEST['Search']);
 			$sql = "SELECT * FROM card WHERE begood=".$begood;
 			$result = mysqli_query($conn, $sql);
